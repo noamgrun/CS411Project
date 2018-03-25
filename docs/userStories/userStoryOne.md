@@ -1,0 +1,12 @@
+A new user would arrive to the landing page where at first glance he would be seeing 
+a listing of image posts sorted by global popularity. If he wants to view any of these posts - he is allowed to because in order for a post to be in the front page they have to be from a public group. 
+
+He would go to the viewing mode of the image (using google Cardboard or on desktop), and in there he can look at the post's details, he can observe the prev and next image if he wishes to switch. But let's say he really liked what he was watching and he tried to give a 'like' to the image. As soon as he click the like button he will be redirected to the log in screen because he needs to be logged in order to give a like. Through an OAuth he will login using his gmail account information so he now has a profile.
+
+He goes into his profile and see he has 0 friends and isnt subscribed to any group.
+He looks into the menu and starts exploring the recommended groups to visit. He enters one and starts browsing the group's content. He decides this is an interest group that he would like to continue seeing this type of content, so he subscribes to the group and he is now subscribed to 1 group. In the process of browsing the group he found a user that was highly praised on that group so he decides to send him an friend request. 
+
+Our user continues browsing the front page and finding new groups he keeps subscribing or sending requests to join the private ones. He has also sent some friend requests to some familiar faces.
+
+He realizes he now has some connections but 0 content. The user presses the new post button and is prompted to upload a panoramic image from his phone's library. He does that and gets redirected to the front page where a confirmation of the upload is returned.
+He realizes he has two notifications in his navigation bar. One of the notifications is to inform that he now has 3 friends who accepted his friendship request. The other notifications is to tell him that 2 of his friends has liked his new post. After having his first experience with the type of content and communities that are available in the app, he decides he will be coming back soon, so for now he logs out of his account and leaves with a good experience :)

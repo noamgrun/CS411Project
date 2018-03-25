@@ -1,5 +1,6 @@
 # CS411Project
-Web App for our CS411 class 
+Web App for CS411 class 
+Image Share Application
 
 
 Class
@@ -12,4 +13,5 @@ Team Members
 ----------------------------------------
 Noam Grunfeld
 Justin Montes
+Ethan Lu
 Miguel Valdez

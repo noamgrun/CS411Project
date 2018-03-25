@@ -1,0 +1,5 @@
+After using this app for a while, I already have complete personal profile and several favourite groups. But I realize that I want to explore more images that match my interest and have more connection with people who share similar interest with me. So I click to the explore page that shows some random interesting images posted by people in my subscribed group and people who have similar interests with me according to the personal profile.
+
+After doing the exploring for the first time. I liked some people’s images and add some of them as my new connection. After a while, when I have more and more friends, instead of showing random pictures from my group, explore page starts to show some pictures that are liked by my friends, which matches my interest better and better.
+
+I post my favourite pictures on my personal page. Them show at other people’s explore page according to the common interests and friends. It attracts some stranger’s like and make me have more friend request to deal with. I accept some people that has same taste as mine and decline some people post picture that I dont really like that much. I
