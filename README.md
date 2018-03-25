@@ -15,3 +15,9 @@ Noam Grunfeld
 Justin Montes
 Ethan Lu
 Miguel Valdez
+
+API & Library Dependencies
+----------------------------------------
+OpenWeather API for weather forcasts
+https://openweathermap.org/
+
