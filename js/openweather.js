@@ -10,8 +10,6 @@ $(document).ready( function(){
             };
 
             function showWeather(weatherReport) {
-                var jsonStr = JSON.stringify(weatherReport);
-                document.getElementById('json').innerHTML = jsonStr;
                 alert("It's " + weatherReport.main.temp + " degrees out today in " + city +"!");
             };
 
