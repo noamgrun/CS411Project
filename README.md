@@ -13,8 +13,8 @@ Team Members
 ----------------------------------------
 Noam Grunfeld
 Justin Montes
-Ethan Lu
 Miguel Valdez
+Ethan Lu
 
 API & Library Dependencies
 ----------------------------------------
