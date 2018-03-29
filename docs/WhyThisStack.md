@@ -1,3 +1,9 @@
+#Why Google Log In
+We figured more users were likely to have a google account considering that google is 
+in control of one of the most popular search engines, and media streaming platforms, 
+thus making it one of the easiest ways for the average user to sign up to use
+our application.
+
 #Why OpenWeather
 
 We chose the OpenWeather API to show current weather in user posts 
