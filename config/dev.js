@@ -8,5 +8,5 @@ module.exports = {
 	mongoURI: 'mongodb://root:L3tM31n8.@ds153752.mlab.com:53752/views-dev',
 	cookieKey: 'asdfasdfasdfaryyhqfmpepmmgsvssv004mfe',
 	sendGridKey: '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',
-    openWeatherAPIKey: 'f9d25b59b1dfb4abe296ed8ec157deb7'
+	weatherKey: '1c38fbc2860b80e3f24048fb6cb03edf'
 };

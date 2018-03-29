@@ -9,7 +9,7 @@ import Landing from './Landing.js';
 import PrivacyPage from './PrivacyPage.js';
 const Dashboard = () => <h2>Dashboard</h2>
 const SurveyNew = () => <h2>Survey New</h2>
-const Wall = () => <h2>Wall</h2>
+const Wall = () => <h2>Hello</h2>
 
 
 class App extends Component {

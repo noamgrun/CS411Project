@@ -42,7 +42,7 @@ class Header extends Component {
 			<nav>
 				<div className = "nav-wrapper">
 					<Link 
-						to = {this.props.auth ? '/wall' : '/'} 
+						to = {this.props.auth ? '/wall' : '/'}
 						className = "left brand-logo"
 					>
 					Views

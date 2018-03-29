@@ -1,4 +1,6 @@
 const express = require('express');
+
+
 const mongoose = require('mongoose');
 const cookieSession = require('cookie-session');
 const passport = require('passport');
@@ -12,6 +14,7 @@ require('./services/passport.js');
 //npm run dev
 //try to connect to MongoDB
 mongoose.connect(keys.mongoURI);
+
 
 const app = express();
 
@@ -47,7 +50,10 @@ if(process.env.NODE_ENV === 'production') {
 }
 
 const PORT = process.env.PORT || 5000;
+//const PORT = process.env.PORT || 8000;
 
+// Create an HTTPS service identical to the HTTP service.
+//https.createServer(options, app).listen(PORT);
 app.listen(PORT);
 
 //npm run dev

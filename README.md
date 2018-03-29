@@ -16,6 +16,9 @@ Justin Montes
 Miguel Valdez
 Ethan Lu
 
+#Back End
+Node.JS
+
 API & Library Dependencies
 ----------------------------------------
 OpenWeather API for weather forcasts

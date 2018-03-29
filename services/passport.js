@@ -78,6 +78,7 @@ passport.use(
 	    	// User.findOrCreate({ facebookId: profile.id }, function (err, user) {
 	     //  		return cb(err, user);
 	    	// });
+	    	
 	    	//query
 	    	console.log(profile);
 	    	
