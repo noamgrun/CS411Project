@@ -1,12 +1,9 @@
 const express = require('express');
-
-
 const mongoose = require('mongoose');
 const cookieSession = require('cookie-session');
 const passport = require('passport');
 const bodyParser = require('body-parser');
 const keys = require('./config/keys.js');
-
 require('./models/User.js');
 require('./models/Survey.js');
 require('./services/passport.js');
@@ -14,7 +11,6 @@ require('./services/passport.js');
 //npm run dev
 //try to connect to MongoDB
 mongoose.connect(keys.mongoURI);
-
 
 const app = express();
 
@@ -32,6 +28,7 @@ app.use(passport.initialize());
 app.use(passport.session());
 
 require('./routes/authRoutes.js')(app);
+require('./routes/billingRoutes.js')(app);
 require('./routes/surveyRoutes.js')(app);
 
 if(process.env.NODE_ENV === 'production') {
@@ -50,14 +47,7 @@ if(process.env.NODE_ENV === 'production') {
 }
 
 const PORT = process.env.PORT || 5000;
-//const PORT = process.env.PORT || 8000;
-
-// Create an HTTPS service identical to the HTTP service.
-//https.createServer(options, app).listen(PORT);
 app.listen(PORT);
 
 //npm run dev
 //https://pure-cliffs-51906.herokuapp.com/ | https://git.heroku.com/pure-cliffs-51906.git
-
-
-

@@ -7,6 +7,8 @@ module.exports = {
 	facebookClientSecret: '338ebaa4c6e05a5e95a9bc624b7a1484',
 	mongoURI: 'mongodb://root:L3tM31n8.@ds153752.mlab.com:53752/views-dev',
 	cookieKey: 'asdfasdfasdfaryyhqfmpepmmgsvssv004mfe',
-	sendGridKey: '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',
-	weatherKey: '1c38fbc2860b80e3f24048fb6cb03edf'
+	stripePublishableKey : 'pk_test_P0JFki1tsjupk1tmJroFWm6t',
+	stripeSecretKey: 'sk_test_GmQ8qnecAIZDOH2b4tgnS1U4',
+	sendGridKey: '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',
+	redirectDomain: 'http://localhost:3000'
 };

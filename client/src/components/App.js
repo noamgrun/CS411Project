@@ -3,13 +3,13 @@ import { BrowserRouter, Route } from 'react-router-dom';
 import { connect } from 'react-redux';
 import * as actions from '../actions';
 
-
 import Header from './Header.js';
-import Landing from './Landing.js';
-import PrivacyPage from './PrivacyPage.js';
-const Dashboard = () => <h2>Dashboard</h2>
-const SurveyNew = () => <h2>Survey New</h2>
-const Wall = () => <h2>Hello</h2>
+import FrontPage from './FrontPage.js';
+import Dashboard from './Dashboard.js';
+import SurveyNew from './surveys/SurveyNew.js';
+import PostNew from './posts/PostNew.js';
+import Profile from './Profile.js';
+//const SurveyNew = () => <h2>Survey New</h2>
 
 
 class App extends Component {
@@ -22,18 +22,21 @@ class App extends Component {
 	render() {
 		return (
 
-			<div className="container">
-				<BrowserRouter>
-					<div>
-						<Header />
-						<Route exact path="/" component={Landing} />
+			<BrowserRouter>
+				<div className="main">
+					<Header />
+					<div className="container">
+						<Route exact path="/" component={FrontPage} />
+						<Route exact path="/posts/new" component={PostNew} />
+						<Route exact path="/profile" component={Profile} />
+						<Route exact path="/information" component={Dashboard} />
 						<Route exact path="/surveys" component={Dashboard} />
 						<Route exact path="/surveys/new" component={SurveyNew} />
-						<Route exact path="/privacy" component = {PrivacyPage} />
-						<Route exact path="/wall" component = {Wall} />
+
+
 					</div>
-				</BrowserRouter>
-			</div>
+				</div>
+			</BrowserRouter>
 
 		);
 	}

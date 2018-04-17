@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { Link } from 'react-router-dom';
+import Payments from './Payments.js';
 
 class Header extends Component {
 
@@ -10,24 +11,22 @@ class Header extends Component {
 
 			case null:
 				return;
-
 			case false:
-				return [
-					<li key='fb-login'>
-						<a href="/auth/facebook">Login With Facebook</a>
-					</li>,
-					<li key='google-login'>
+				return (
+					<li>
 						<a href="/auth/google">Login With Google</a>
 					</li>
-				];
-
+				);
 			default:
 				return [
-					<li key="groups">
-						<a href="/groups">Groups</a>
+					<li key="pay">
+						<Payments/>
+					</li>,
+					<li key="credits" style={{ margin: '0 10px' }}>
+						Credits: { this.props.auth.credits }
 					</li>,
 					<li key="profile">
-						<a href="/profile">Profile</a>
+						<a href="/profile">{ this.props.auth.firstName }</a>
 					</li>,
 					<li key="logout" >
 						<a href="/api/logout">Logout</a>
@@ -40,16 +39,18 @@ class Header extends Component {
 
 		return (
 			<nav>
-				<div className = "nav-wrapper">
-					<Link 
-						to = {this.props.auth ? '/wall' : '/'}
-						className = "left brand-logo"
-					>
-					Views
-					</Link>
-					<ul className = "right">
-						{ this.renderContent() }
-					</ul>
+				<div className="nav-wrapper green">
+					<div className="container">
+						<Link
+							to = {this.props.auth ? '/' : '/'}
+							className = "left brand-logo"
+						>
+						Views
+						</Link>
+						<ul className = "right">
+							{ this.renderContent() }
+						</ul>
+					</div>
 				</div>
 			</nav>
 		);
