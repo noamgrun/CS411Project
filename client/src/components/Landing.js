@@ -3,6 +3,9 @@ import _ from 'lodash';
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import { reduxForm, Field } from 'redux-form';
+import request from 'request';
+const weather = require('openweathermap');
+
 
 const FIELDS = [
 	{ name:'city' }
@@ -18,7 +21,21 @@ class Landing extends Component  {
 			);
 		});
 	}
+    handleSubmit(){
+        console.log("43.211");
+        values => new Promise((resolve, reject) => {
+            fetch("/api/weather", {method: "get", body: JSON.stringify(values)})
+                .then(res => res.json())
+                .then(res => {
+                    resolve(res.data)
+                })
+        });
+    }
 
+/*
+    handleSubmit(){
+	    console.log("as");
+    }
 	handleSubmit(){
 	        console.log("43.211");
             values => new Promise((resolve, reject) => {
@@ -29,6 +46,7 @@ class Landing extends Component  {
                     })
             });
         }
+*/
 
 	render(){
 		return (
@@ -36,9 +54,9 @@ class Landing extends Component  {
 				<h1>Views</h1>
 				Search city to find current temperature.
 
-				<form onSubmit={this.handleSubmit}>
+				<form>
 					{this.renderFields()}
-					<button type="submit">Submit</button>
+					<button type="submit" onSubmit={this.handleSubmit()}>Submit</button>
 				</form>
 			</div>
 		)

@@ -1,7 +1,7 @@
 {
   "name": "server",
   "version": "1.0.0",
-  "description": "",
+  "description": "Web App for CS411 class  Image Share Application",
   "main": "index.js",
   "engines": {
     "node": "8.1.1",
@@ -23,10 +23,24 @@
     "express": "^4.16.2",
     "mongoose": "^5.0.5",
     "nodemon": "^1.14.12",
+    "openweathermap": "^1.0.0",
     "passport": "^0.4.0",
     "passport-facebook": "^2.1.1",
     "passport-google-oauth20": "^1.0.0",
+    "request": "^2.85.0",
     "sendgrid": "^5.2.3",
     "stripe": "^5.5.0"
-  }
+  },
+  "directories": {
+    "doc": "docs"
+  },
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mvg35/CS411Project.git"
+  },
+  "bugs": {
+    "url": "https://github.com/mvg35/CS411Project/issues"
+  },
+  "homepage": "https://github.com/mvg35/CS411Project#readme"
 }
