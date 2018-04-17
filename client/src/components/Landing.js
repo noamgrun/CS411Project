@@ -4,7 +4,9 @@ import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import { reduxForm, Field } from 'redux-form';
 import request from 'request';
-const weather = require('openweathermap');
+
+// init weather and set defaults
+import OpenWeatherMap from 'react-open-weather-map';
 
 
 const FIELDS = [
