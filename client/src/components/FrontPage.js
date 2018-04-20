@@ -1,26 +1,57 @@
-import React from 'react';
+import React, { Component } from 'react';
+import { connect } from 'react-redux';
 import  { Link } from 'react-router-dom';
-import PostList from './posts/PostList.js';
+//import PostList from './posts/PostList.js';
+import FrontPageList from './posts/FrontPageList.js';
 
-const FrontPage = () => {
-//<PostList />
-    return (
-        <div className="row">
-            <div className="col s8">
-                <h1>Frontpage Posts</h1>
-                <PostList />
+class FrontPage extends Component {
+
+    renderAddbutton() {
+        switch (this.props.auth) {
+
+            case null:
+				return;
+
+			case false:
+                return (
+                    <a href="/auth/google" className="btn-floating btn-large green">
+                        <i className="material-icons">add</i>
+                    </a>
+                );
+
+			default:
+                return (
+                    <Link to="/posts/new" className="btn-floating btn-large green">
+                        <i className="material-icons">add</i>
+                    </Link>
+				);
+		}
+    }
+
+
+    render() {
+        return (
+            <div className="row">
+                <div className="col s8">
+                    <FrontPageList />
+                </div>
+                <div className="col s4">
+                    <h1>Submenu</h1>
+                </div>
+                <div className="fixed-action-btn">
+
+                    { this.renderAddbutton() }
+
+                </div>
             </div>
-            <div className="col s4">
-                <h1>Submenu</h1>
-            </div>
-            <div className="fixed-action-btn">
-                <Link to="/posts/new" className="btn-floating btn-large green">
-                    <i className="material-icons">add</i>
-                </Link>
-            </div>
-        </div>
-    )
+        )
+    }
 
 };
 
-export default FrontPage;
+function mapStateToProps({ auth }) {
+
+	return { auth };
+}
+
+export default connect(mapStateToProps)(FrontPage);

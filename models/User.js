@@ -10,7 +10,8 @@ const userSchema = new Schema({
 	lastName: String,
 	description: { type: String, default: null} ,
 	language: String,
-	credits: { type: Number, default: 0 }
+	credits: { type: Number, default: 0 },
+	private: { type: Number, default: 0 }
 
 });
 

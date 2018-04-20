@@ -1,20 +1,18 @@
 const mongoose = require('mongoose');
 const { Schema } = mongoose; //is equal to    const Schema = mongoose.Schema;
-const LikeSchema = require('./Likes.js');
-const CommentSchema = require('./Comments.js');
-
+const PropSchema = require('./Prop.js');
+const CommentSchema = require('./Comment.js');
 
 const postSchema = new Schema({
 
-    _user: { type: Schema.Types.ObjectId, ref: 'User'},
+    image: { type:String, default: null },
 	description: String,
-    image: String,
     location: String,
-    group: { type: Number, default: 0 },
-	likes: [LikeSchema],
-    comments: [CommentSchema],
+    _user: { type: Schema.Types.ObjectId, ref: 'User'},
+    props: { type:[PropSchema], default: null },
+    comments: { type:[CommentSchema], default: null },
 	dateCreated: Date,
-	lastInteracted: Date
+	lastInteracted: { type:Date, default: null }
 
 });
 

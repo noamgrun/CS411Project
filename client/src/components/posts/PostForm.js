@@ -1,43 +1,50 @@
 import React, { Component } from 'react';
-import axios, { post } from 'axios';
+import axios from 'axios';
 
 class PostForm extends Component {
 
     constructor(props) {
-      super(props);
-      this.state ={
-        file:null
-      }
-      this.onFormSubmit = this.onFormSubmit.bind(this)
-      this.onChange = this.onChange.bind(this)
-      this.fileUpload = this.fileUpload.bind(this)
-    }
-    onFormSubmit(e){
-      e.preventDefault() // Stop form submit
-      this.fileUpload(this.state.file).then((response)=>{
-        console.log(response.data);
-      })
-    }
-    onChange(e) {
-      this.setState({file:e.target.files[0]})
-    }
-    fileUpload(file){
-      const url = 'http://example.com/file-upload';
-      const formData = new FormData();
-      formData.append('file',file)
-      const config = {
-          headers: {
-              'content-type': 'multipart/form-data'
+        super(props);
+        this.state = {
+            description: '',
+            location: ''
           }
-      }
-      return  post(url, formData,config)
     }
 
+    onSubmit = (e) => {
+        e.preventDefault();
+        // get our form data out of state
+        const { description, location } = this.state;
+        console.log(this.state.description);
+
+        axios.post('/api/posts', { description, location })
+          .then((res) => {
+            //access the results here....
+            console.log(res)
+          });
+      }
+
+
+     onChange = (e) => {
+        const state = this.state
+        state[e.target.name] = e.target.value;
+        this.setState(state);
+     }
+
     render() {
+
+        const { description, location } = this.state;
+
       return (
-        <form onSubmit={this.onFormSubmit}>
-          <h1>File Upload</h1>
-          <input type="file" onChange={this.onChange} />
+        <form onSubmit={ this.onSubmit }>
+          <label>
+            Description
+            <input type="text" name="description" onChange={this.onChange} value={this.state.description} />
+          </label>
+          <label>
+            Location
+            <input type="text" name="location" onChange={this.onChange} value={this.state.location}/>
+          </label>
           <button type="submit">Upload</button>
         </form>
      )

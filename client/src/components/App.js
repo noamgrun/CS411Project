@@ -17,6 +17,7 @@ class App extends Component {
 	componentDidMount() {
 
 		this.props.fetchUser();
+
 	}
 
 	render() {
@@ -32,8 +33,6 @@ class App extends Component {
 						<Route exact path="/information" component={Dashboard} />
 						<Route exact path="/surveys" component={Dashboard} />
 						<Route exact path="/surveys/new" component={SurveyNew} />
-
-
 					</div>
 				</div>
 			</BrowserRouter>

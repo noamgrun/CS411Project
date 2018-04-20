@@ -6,6 +6,7 @@ const bodyParser = require('body-parser');
 const keys = require('./config/keys.js');
 require('./models/User.js');
 require('./models/Survey.js');
+require('./models/Post.js');
 require('./services/passport.js');
 
 //npm run dev
@@ -30,6 +31,7 @@ app.use(passport.session());
 require('./routes/authRoutes.js')(app);
 require('./routes/billingRoutes.js')(app);
 require('./routes/surveyRoutes.js')(app);
+require('./routes/postRoutes.js')(app);
 
 if(process.env.NODE_ENV === 'production') {
 
